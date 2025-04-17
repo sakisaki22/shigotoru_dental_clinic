@@ -1,0 +1,410 @@
+html{
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1220px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 横並びのcss */
+.flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ヘッダー */
+header{
+    padding: 27px 0;
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+}
+
+.header_navpc li{
+    margin-left: 38px;
+}
+
+/* マウスカーソルを当てると色が変わる */
+.header_navpc li a:hover{
+    color: #2794CD;
+    /* 0.3秒かけて色が変わる */
+    transition: .3s;
+}
+/* マウスカーソルを外すと0.3秒かけて色が戻る */
+.header_navpc li a{
+    transition: .3s;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  header .container{
+  }
+}
+
+/* -メインビジュアル- */
+#hero{
+    background-image: url(../img/img3.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 540px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    /* はみ出たところはカット */
+    overflow: hidden;
+}
+
+/* 擬似要素を追加（上から白いフィルターをかける） */
+#hero::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* 全体表示にする */
+    /* セットで親要素にposition: relative;を使う */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 不透明度20% */
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.hero_inner{
+    z-index: 2;
+    color: #528FBB;
+    width: 100%;
+    text-align: center;
+}
+
+.hero_inner h1{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* -お知らせ- */
+#news{
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+
+#news ul{
+    max-width: 700px;
+    /* 要素を真ん中に寄せる */
+    margin: 0 auto;
+}
+
+#news li{
+    border: solid 1px rgb(51,51,51);
+    margin-bottom: 20px;
+    padding: 16px 24px;
+}
+
+.date{
+    color: #528FBB;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.btn{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 40px;
+    display: block;
+    color: #fff;
+    background-color: #528FBB;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    transition: .3s;
+    margin: 0 auto;
+    text-align: center;
+    width: 180px;
+}
+
+#news a:hover{
+    background-color: #BFE2FB;
+}
+
+
+/* -院長よりご挨拶- */
+#greeting{
+    padding-top: 60px;
+    margin-bottom: 60px;
+    margin: 0 auto;
+}
+
+.doctor_matsumoto{
+    justify-items: center;
+}
+
+.doctor_matsumoto img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-bottom: 18px;
+}
+
+.name{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.name span{
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+#greeting_text{
+    justify-content: center;
+    margin-left: 120px;
+}
+
+
+/* -当院について- */
+#about{
+    margin-bottom: 120px;
+    padding-top: 60px;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 500;
+    color: #4D9FE0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#about h3{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* 2つの要素を横並びにする */
+.column_2{
+    width: 45%;
+    margin-bottom: 60px;
+}
+
+.text{
+    /* 行間を設定 */
+    line-height: 2;
+}
+
+.concept_img{
+    background-image: url(../img/2262627_m.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    border-radius: 20px;   
+}
+
+#about a:hover{
+    background-color: #BFE2FB;
+}
+
+/* -診療案内- */
+#guide{
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col{
+    width: 23%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.icon{
+    width: 130px;
+    height: auto;
+}
+
+#guide h3{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+#guide_btn{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 40px;
+    display: block;
+    color: #fff;
+    background-color: #528FBB;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    transition: .3s;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+}
+
+#guide a:hover{
+    background-color: #BFE2FB;
+}
+
+
+/* -スタッフブログ- */
+#blog{
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+
+#blog ul{
+    max-width: 700px;
+    /* 要素を真ん中に寄せる */
+    margin: 0 auto;
+}
+
+#blog li{
+    border: solid 1px rgb(51,51,51);
+    margin-bottom: 20px;
+    padding: 16px 24px;
+}
+
+#blog a:hover{
+    background-color: #BFE2FB;
+}
+
+
+/* フッター */
+footer{
+    padding: 27px 0;
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+}
+
+.footer_navpc li{
+    margin-left: 38px;
+    margin-bottom: 50px;
+}
+
+/* マウスカーソルを当てると色が変わる */
+.footer_navpc li a:hover{
+    color: #2794CD;
+    /* 0.3秒かけて色が変わる */
+    transition: .3s;
+}
+
+/* マウスカーソルを外すと0.3秒かけて色が戻る */
+.footer_navpc li a{
+    transition: .3s;
+}
+
+#access_info{
+    margin-top: 20px;
+}
+
+#time_title{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.column_2{
+    justify-items: center;
+}
+
+.column_2 table{
+    border-collapse: collapse;
+    border: solid 3px;
+    margin-bottom: 15px;
+}
+
+.column_2 table th,
+.column_2 table td{
+  border: solid 1px;
+  text-align: center;
+}
+
+table th {/*table内のthに対して*/
+  padding: 10px;/*上下左右10pxずつ*/
+}
+
+table td {/*table内のtdに対して*/
+  padding: 3px 10px;/*上下3pxで左右10px*/
+}
+
+
+
+/* お問い合わせページ　contact.htmlのcss */
+#contact{
+    padding-top: 60px;
+    margin-bottom: 130px;
+}
+
+#contact h1{
+    font-size: 56px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#contact hr{
+    border: solid 3px #4D9FE0;
+    margin: 0 auto 40px auto;
+    width: 200px;
+}
+
+#contact_inner form{
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+#contact_inner label{
+    /* 横方向に100% */
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+#contact_inner input, #contact_inner textarea{
+    background-color: #fff;
+    /* displayとwidthで横幅100% */
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    color: rgb(51,51,51);
+}
+
+/* []で送信ボタンのみを指定 */
+#contact_inner input [type=submit]{
+    text-align: center;
+    background-color: #528FBB;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px 15px;
+    letter-spacing: 6px;
+    border-radius: 10px;
+    /* カーソルから外すと0.3秒かけて色が変わる */
+    transition: .3s;
+}
+
+/* カーソルを当てると色が変わる */
+#contact_inner input [type=submit]:hover{
+    background-color: #BFE2FB;
+}

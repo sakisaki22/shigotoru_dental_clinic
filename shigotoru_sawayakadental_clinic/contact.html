@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>さわやか歯科のお問い合わせページ</title>
+        
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+        
+        <!-- style.css -->
+        <link rel="stylesheet" href="./css/contact_style.css">
+        
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Cherry+Bomb+One&family=Darumadrop+One&family=Dela+Gothic+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+Decol&family=Kiwi+Maru&family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=New+Tegomin&family=Noto+Sans+JP:wght@100..900&family=Palette+Mosaic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Yuji+Boku&family=Yuji+Mai&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+      
+      </head>
+      <body>
+        <header>
+            <div class="container flex">
+                <a href="#" class="logo">
+                    <img src="img/logo2.svg" alt="さわやか歯科クリニックのロゴ">
+                </a>
+                <nav>
+                    <ul class="header_navpc flex">
+                        <li><a href="#">ホーム<!--<span>HOME</span>--></a></li>
+                        <li><a href="news.html">お知らせ<!--<span>NEWS</span>--></a></li>
+                        <li><a href="about.html">当院について<!--<span>ABOUT</span>--></a></li>
+                        <li><a href="guide.html">診療案内<!--<span>GUIDE</span>--></a></li>
+                        <li><a href="staff.html">スタッフ紹介<!--<span>STAFF</span>--></a></li>
+                        <li><a href="blog.html">スタッフブログ<!--<span>BLOG</span>--></a></li>
+                        <li><a href="#access">アクセス<!--<span>ACCESS</span>--></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+      <main>   
+      <section id="contact" class="container">
+      <h1>お問い合わせ</h1>
+      <hr>
+      <div class="contact_inner">
+        <form action="./submit.php" method="post">
+            <!--forでお名前をクリックすると入力欄にいくということ-->
+            <label for="name">お名前</label>
+            <!--requiredは入力を必須にするということ-->
+            <!--inputは閉じタグがない-->
+            <input type="text" id="name" name="name" required>
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">お問い合わせ内容</label>
+            <!--rowsは6行分くらい入力できるということ-->
+            <textarea id="message" name="message"  rows="6"></textarea>
+            <!--送信ボタン-->
+            <input type="submit" value="送信">
+        </form>
+      </div>
+      </section>
+      </main>
+      <footer>
+        <div class="container">
+            <ul class="footer_navpc flex">
+                <li><a href="#">ホーム<!--<span>HOME</span>--></a></li>
+                <li><a href="news.html">お知らせ<!--<span>NEWS</span>--></a></li>
+                <li><a href="about.html">当院について<!--<span>ABOUT</span>--></a></li>
+                <li><a href="guide.html">診療案内<!--<span>GUIDE</span>--></a></li>
+                <li><a href="staff.html">スタッフ紹介<!--<span>STAFF</span>--></a></li>
+                <li><a href="blog.html">スタッフブログ<!--<span>BLOG</span>--></a></li>
+                <li><a href="#access">アクセス<!--<span>ACCESS</span>--></a></li>
+            </ul>
+            <div class="flex">
+            <div class="column_2">
+                <a href="#" class="logo"><img src="img/logo2.svg"></a>
+                <p class="text" id="access_info">
+                    〒105-0001<br>
+                    東京都港区虎ノ門１丁目３−１<br>
+                    東京メトロ 虎ノ門駅より直結・徒歩1分<br>
+                    駐車場はないので、近隣のコインパーキングをご利用ください
+                </p>
+            </div>
+            <div class="column_2">
+                <p id="time_title">診療時間</p>
+                <table border="1">
+                    <tr>
+                        <th>時間</th>
+                        <th>月</th>
+                        <th>火</th>
+                        <th>水</th>
+                        <th>木</th>
+                        <th>金</th>
+                        <th>土</th>
+                        <th>日</th>
+                    </tr>
+                    <tr>
+                        <td>9:30~13:00</td>
+                        <td>⚪︎</td>
+                        <td>⚪︎</td>
+                        <td>-</td>
+                        <td>⚪︎</td>
+                        <td>⚪︎</td>
+                        <td>⚪︎</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>14:00~18:30</td>
+                        <td>⚪︎</td>
+                        <td>⚪︎</td>
+                        <td>-</td>
+                        <td>⚪︎</td>
+                        <td>⚪︎</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+                <p class="text">
+                 ※水曜・日曜は休診日（祝日は不定休）<br>
+                 ※土曜は午前のみ
+                </p>
+            </div>
+            </div>
+        </div>
+      </footer>
+    </body>
+</html>

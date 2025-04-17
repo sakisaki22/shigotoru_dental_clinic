@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>さわやか歯科</title>
+  
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+  
+  <!-- style.css -->
+  <link rel="stylesheet" href="./css/new_style.css">
+  
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Cherry+Bomb+One&family=Darumadrop+One&family=Dela+Gothic+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+Decol&family=Kiwi+Maru&family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=New+Tegomin&family=Noto+Sans+JP:wght@100..900&family=Palette+Mosaic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Yuji+Boku&family=Yuji+Mai&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+
+</head>
+  
+<body>
+  
+  <header>
+    <div class="container flex">
+        <a href="#" class="logo">
+            <img src="img/logo2.svg" alt="さわやか歯科クリニックのロゴ">
+        </a>
+        <nav>
+            <ul class="header_navpc flex">
+                <li><a href="#">ホーム<!--<span>HOME</span>--></a></li>
+                <li><a href="news.html">お知らせ<!--<span>NEWS</span>--></a></li>
+                <li><a href="about.html">当院について<!--<span>ABOUT</span>--></a></li>
+                <li><a href="guide.html">診療案内<!--<span>GUIDE</span>--></a></li>
+                <li><a href="staff.html">スタッフ紹介<!--<span>STAFF</span>--></a></li>
+                <li><a href="blog.html">スタッフブログ<!--<span>BLOG</span>--></a></li>
+                <li><a href="#access">アクセス<!--<span>ACCESS</span>--></a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section id="hero" class="container">
+        <div class="hero_inner">
+            <h1>地域の皆様が安心して通える、家族みんなのための歯科医院</h1>
+        </div>
+        <!--
+        <div class="hero_inner">
+            <h1>清潔で快適な診療環境</h1>
+        </div>
+        <div class="hero_inner">
+            <h1>小さなお子さまからご年配の方まで通いやすい</h1>
+        </div>
+        -->
+    </section>
+
+    <section id="news" class="container">
+        <h2 class="title">お知らせ</h2>
+        <ul>
+            <li>
+                <p class="date">2025/04/01</p>
+                <p>さわやか歯科クリニックのホームページを開設しました！</p>
+            </li>
+            <li>
+                <p class="date">2025/04/01</p>
+                <p>臨時休診のお知らせ</p>
+            </li>
+            <li>
+                <p class="date">2025/04/01</p>
+                <p>年末年始の診療について</p>
+            </li>
+        </ul>
+        <a href="news.html" class="btn">もっとみる</a>
+    </section>
+
+    <section id="greeting" class="container">
+        <h2 class="title">院長よりご挨拶</h2>
+        <div class="doctor_matsumoto">
+        <img src="img/doctor2_matsumoto.jpg">
+        <div class="flex">
+            <p class="name"><span>院長</span>松本 貴子</p>
+        </div>
+        </div>
+            <p class="text" id="greeting_text">みなさま、こんにちは。<br>
+                「 さわやか歯科クリニック」院長の松本貴子です。<br>
+                当院は、小さなお子さまからご年配の方まで、
+                安心して通える歯科クリニックを目指しています。<br>
+                
+                歯医者に苦手意識を持つ方にも、やさしく丁寧な治療 を提供し、
+                リラックスできる環境を整えています。<br>
+                痛みを抑えた治療やわかりやすい説明を心がけ、
+                不安なく通えるよう努めています。<br>
+                また、歯の健康は全身の健康につながるため、
+                治療だけでなく予防歯科にも力を入れています。<br>
+                定期検診やクリーニングを通じて、みなさまの大切な歯を
+                守り続けるお手伝いをしていきます。<br>
+                <br>
+                地域のみなさまにとって、「ここなら安心して通える」と
+                思っていただけるクリニックを目指し、スタッフ一同、
+                努力してまいります。<br>
+                どうぞよろしくお願いいたします。
+            </p>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="title">当院について</h2>
+        <h3>地域の皆様が安心して通える、家族みんなのための歯科医院</h3>
+        <div class="flex">
+            <div class="column_2">
+                <p class="text">当院は、小さなお子さまからご年配の方まで、
+                    どなたでも安心して通える歯科クリニックを
+                    目指しています。<br>
+                    <br>
+                    単に「 治療をする」のではなく、
+                    患者さんの不安を和らげ、
+                    笑顔で通えることを大切にし、
+                    最新の設備とやさしい診療で
+                    家族みんなの健康な歯を守れるよう
+                    サポートしていきます。</p>
+            </div>
+            <div class="column_2 concept_img">
+                <!--<img src="img/img2.jpg" alt="植物の写真">-->
+            </div>
+        </div>
+        <a href="about.html" class="btn">もっとみる</a>
+    </section>
+
+    <section id="guide" class="container">
+        <h2 class="title">診療案内</h2>
+        <div class="row">
+            <div class="col">
+                <img class="icon" src="img/general_dental.png" alt="一般歯科">
+                <h3>一般歯科</h3>
+            </div>
+            <div class="col">
+                <img class="icon" src="img/kids_dental.png" alt="小児歯科">
+                <h3>小児歯科</h3>
+            </div>
+            <div class="col">
+                <img class="icon" src="img/surgery_dental.png" alt="口腔外科">
+                <h3>口腔外科</h3>
+            </div>
+            <div class="col">
+                <img class="icon" src="img/yobou_dental.png" alt="予防歯科">
+                <h3>予防歯科</h3>
+            </div>
+        </div>
+        <a href="guide.html" class="btn" id="guide_btn">詳しくみる</a>
+    </section>
+
+    <section id="blog" class="container">
+        <h2 class="title">スタッフブログ</h2>
+        <ul>
+            <li>
+                <p class="date">2025/04/05</p>
+                <p>正しい歯磨きのコツ！毎日のケアでむし歯・歯周病を防ごう</p>
+            </li>
+            <li>
+                <p class="date">2025/04/05</p>
+                <p>定期歯科検診で健康な歯を守りましょう！</p>
+            </li>
+            <li>
+                <p class="date">2025/04/05</p>
+                <p>おすすめの歯磨き粉！</p>
+            </li>
+        </ul>
+        <a href="blog.html" class="btn">もっとみる</a>
+    </section>
+
+    <section id="access" class="container">
+        <h2 class="title">アクセス</h2>
+        <div class="flex">
+        <p class="text">
+            〒105-0001<br>
+            東京都港区虎ノ門１丁目３−１<br>
+            東京メトロ 虎ノ門駅より直結・徒歩1分<br>
+            駐車場はないので、近隣のコインパーキングをご利用ください
+        </p>
+        <!--googlemap埋め込み-->
+        <div class="access_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2804973827983!2d139.74691337561214!3d35.670094730585916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9278cad6bd%3A0xf8a15f79423fdee0!2z44CSMTA1LTAwMDEg5p2x5Lqs6YO95riv5Yy66JmO44OO6ZaA77yR5LiB55uu77yT4oiS77yR!5e0!3m2!1sja!2sjp!4v1744774932665!5m2!1sja!2sjp" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
+    </section>
+
+  </main>
+  
+  <footer>
+    <div class="container">
+        <ul class="footer_navpc flex">
+            <li><a href="#">ホーム<!--<span>HOME</span>--></a></li>
+            <li><a href="news.html">お知らせ<!--<span>NEWS</span>--></a></li>
+            <li><a href="about.html">当院について<!--<span>ABOUT</span>--></a></li>
+            <li><a href="guide.html">診療案内<!--<span>GUIDE</span>--></a></li>
+            <li><a href="staff.html">スタッフ紹介<!--<span>STAFF</span>--></a></li>
+            <li><a href="blog.html">スタッフブログ<!--<span>BLOG</span>--></a></li>
+            <li><a href="#access">アクセス<!--<span>ACCESS</span>--></a></li>
+        </ul>
+        <div class="flex">
+        <div class="column_2">
+            <a href="#" class="logo"><img src="img/logo2.svg"></a>
+            <p class="text" id="access_info">
+                〒105-0001<br>
+                東京都港区虎ノ門１丁目３−１<br>
+                東京メトロ 虎ノ門駅より直結・徒歩1分<br>
+                駐車場はないので、近隣のコインパーキングをご利用ください
+            </p>
+        </div>
+        <div class="column_2">
+            <p id="time_title">診療時間</p>
+            <table border="1">
+                <tr>
+                    <th>時間</th>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th>土</th>
+                    <th>日</th>
+                </tr>
+                <tr>
+                    <td>9:30~13:00</td>
+                    <td>⚪︎</td>
+                    <td>⚪︎</td>
+                    <td>-</td>
+                    <td>⚪︎</td>
+                    <td>⚪︎</td>
+                    <td>⚪︎</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>14:00~18:30</td>
+                    <td>⚪︎</td>
+                    <td>⚪︎</td>
+                    <td>-</td>
+                    <td>⚪︎</td>
+                    <td>⚪︎</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            <p class="text">
+             ※水曜・日曜は休診日（祝日は不定休）<br>
+             ※土曜は午前のみ
+            </p>
+        </div>
+        </div>
+    </div>
+  </footer>
+  
+</body>
+
+</html>
