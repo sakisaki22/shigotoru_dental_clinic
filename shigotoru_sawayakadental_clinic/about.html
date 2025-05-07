@@ -1,309 +1,188 @@
-<!--ヘッダーPHPここから-->
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
-        <title>さわやか歯科クリニック</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="さわやか歯科クリニック" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css" />
-        <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="styles.css/style.css" />  
-    </head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>さわやか歯科の当院についてのページ</title>
+        
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+        
+        <!-- style.css -->
+        <link rel="stylesheet" href="./css/new_style.css">
+        
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Cherry+Bomb+One&family=Darumadrop+One&family=Dela+Gothic+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+Decol&family=Kiwi+Maru&family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=New+Tegomin&family=Noto+Sans+JP:wght@100..900&family=Palette+Mosaic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Yuji+Boku&family=Yuji+Mai&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+      
+      </head>
 
       <body>
-        <div class="super_container">
-            <!--ヘッダーここから-->
-        <header class="header">
-            <div class="header_content">
-                <nav class="nav_pc">
-                        <div class="logo_img">
-                            <a href="index.html">
-                                <img src="img/logo2.svg" alt="ロゴ">
-                            </a>
-                        </div>
-                    <div class="nav_pc_items" id="navbarSupportedContent">
-                        <ul class="navbar-nav flex-row ml-md-auto d-md-flex main_nav">
-                            <li class="nav_item">
-                                <a class="nav_link" href="index.html">ホーム
-                                    <p>HOME</p>
-                                </a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link" href="news.html">お知らせ
-                                    <p>NEWS</p>
-                                </a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link" href="about.html">当院について
-                                    <p>ABOUT</p>
-                                </a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link" href="guide.html">診療案内
-                                    <p>GUIDE</p>
-                                </a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link" href="staff.html">スタッフ紹介
-                                    <p>STAFF</p>
-                                </a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link" href="staff.html">スタッフ紹介
-                                    <p>STAFF</p>
-                                </a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link" href="blog.html">スタッフブログ
-                                    <p>BLOG</p>
-                                </a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link" href="index.html#access">アクセス
-                                    <p>ACCESS</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+        <header>
+            <div class="container flex">
+                <a href="new_index.html" class="logo">
+                    <img src="img/logo2.svg" alt="さわやか歯科クリニックのロゴ">
+                </a>
+                <nav>
+                    <ul class="header_navpc flex">
+                        <li><a href="new_index.html">ホーム<!--<span>HOME</span>--></a></li>
+                        <li><a href="news.html">お知らせ<!--<span>NEWS</span>--></a></li>
+                        <li><a href="about.html">当院について<!--<span>ABOUT</span>--></a></li>
+                        <li><a href="guide.html">診療案内<!--<span>GUIDE</span>--></a></li>
+                        <li><a href="staff.html">スタッフ紹介<!--<span>STAFF</span>--></a></li>
+                        <li><a href="blog.html">スタッフブログ<!--<span>BLOG</span>--></a></li>
+                        <li><a href="new_index.html#access">アクセス<!--<span>ACCESS</span>--></a></li>
+                    </ul>
                 </nav>
             </div>
-    </header>
-    <!--ヘッダーここまで-->
-    <!--header.phpここまで-->
+        </header>
 
-    <!--メインビジュアル-->
-    <section class="mainvisual_about">
-        <div class="mainvisual_about_img">
-            <img src="img/img6.jpg" alt="当院についての写真">
-        </div>
-        <div class="mainvisual_about_text">
-            <p>当院について</p>
-        </div>
-    </section>
-    
-    <section class="feature">
-        <div class="feature_title">
-            <div class="feature_title_text">当院の特徴</div>
-        </div>
-        <div class="feature_content">
-                <div class="feature_img">
-                    <img src="img/img5.jpg" alt="feature診察室の写真">
-                </div>
-                <div class="feature_inner">
-                    <div class="feature_inner_title">
-                        <p>清潔で快適な診療環境</p>
+        <main>  
+            <section id="about_hero" class="container">
+            </section>
+
+            <section id="about_content" class="container">
+                <h1>当院について</h1>
+                <hr>
+                <h2 class="title">当院の特徴</h2>
+                <div class="feature_inner flex">
+                    <div class="about_column_55">
+                        <img src="img/img5.jpg" width="100%" alt="当院の特徴1">
                     </div>
-                    <div class="feature_inner_text">
-                        <p>患者さんに安心して<br>
+                    <div class="about_column_40">
+                        <h3>清潔で快適な診療環境</h3>
+                        <p class="text">患者さんに安心して
                             治療を受けていただけるよう、<br>
-                            衛生管理を徹底し、<br>
+                            衛生管理を徹底し、
                             最新の滅菌システムを導入。<br>
-                            院内は明るく、清潔感のある<br>
+                            院内は明るく、清潔感のある
                             快適な空間づくりを<br>
                             心がけています。
                         </p>
                     </div>
                 </div>
-        </div>
-        <div class="feature_content">
-            <div class="feature_img">
-                <img src="img/img8.jpg" alt="feature待合室の写真">
-            </div>
-            <div class="feature_inner">
-                <div class="feature_inner_title">
-                    <p>小さなお子さまから<br>
-                        ご年配の方まで通いやすい</p>
-                </div>
-                <div class="feature_inner_text">
-                    <p>
-                        お子さまが楽しく通えるように、<br>
-                        キッズスペースを完備。<br>
-                        また、ご年配の方や<br>
-                        お身体が不自由な方にも<br>
-                        安心してご来院いただけるよう、<br>
-                        バリアフリー設計 になっています。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="important">
-        <div class="important_title">
-            <div class="important_title_text">当院が大切にしていること</div>
-        </div>
-        <div class="important_content">
-            <div class="important_img">
-                <img src="img/img7.jpg" alt="important1">
-            </div>
-            <div class="important_inner">
-                <div class="important_inner_title">
-                    <p>痛みの少ないやさしい治療</p>
-                </div>
-                <div class="important_inner_text">
-                    <p>麻酔の工夫や<br>
-                        最新の技術を取り入れ、<br>
-                        痛みを最小限に抑えた治療を<br>
-                        心がけています。<br>
-                        歯医者が苦手な方も、<br>
-                        安心して通っていただけるよう<br>
-                        配慮しています。
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="important_content">
-            <div class="important_img">
-                <img src="img/img7.jpg" alt="important2">
-            </div>
-            <div class="important_inner">
-                <div class="important_inner_title">
-                    <p>お口の健康を守る予防歯科</p>
-                </div>
-                <div class="important_inner_text">
-                    <p>「痛くなったら行く」のではなく、<br>
-                        むし歯や歯周病を防ぐ予防ケアを<br>
-                        大切にしています。<br>
-                        定期検診・クリーニングで、<br>
-                        大切な歯を一生涯守ります。
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="important_content">
-            <div class="important_img">
-                <img src="img/img7.jpg" alt="important3">
-            </div>
-            <div class="important_inner">
-                <div class="important_inner_title">
-                    <p>清潔で最新の設備</p>
-                </div>
-                <div class="important_inner_text">
-                    <p>患者さんが安心して<br>
-                        治療を受けられるよう、<br>
-                        徹底した衛生管理と<br> 
-                        最新の歯科医療機器を導入。<br>
-                        快適な環境で、<br>
-                        質の高い治療を提供します。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer_content">
-            <div class="nav_pc_footer">
-                <div class="nav_pc_footer_items" id="navbarSupportedContent">
-                    <ul class="navbar-nav flex-row ml-md-auto d-md-flex footer_nav">
-                        <li class="nav_footer_item">
-                            <a class="nav_footer_link" href="index.html">ホーム
-                                <p>HOME</p>
-                            </a>
-                        </li>
-                        <li class="nav_footer_item">
-                            <a class="nav_footer_link" href="news.html">お知らせ
-                                <p>NEWS</p>
-                            </a>
-                        </li>
-                        <li class="nav_footer_item">
-                            <a class="nav_footer_link" href="about.html">当院について
-                                <p>ABOUT</p>
-                            </a>
-                        </li>
-                        <li class="nav_footer_item">
-                            <a class="nav_footer_link" href="guide.html">診療案内
-                                <p>GUIDE</p>
-                            </a>
-                        </li>
-                        <li class="nav_footer_item">
-                            <a class="nav_footer_link" href="staff.html">スタッフ紹介
-                                <p>STAFF</p>
-                            </a>
-                        </li>
-                        <li class="nav_footer_item">
-                            <a class="nav_footer_link" href="staff.html">スタッフ紹介
-                                <p>STAFF</p>
-                            </a>
-                        </li>
-                        <li class="nav_footer_item">
-                            <a class="nav_footer_link" href="blog.html">スタッフブログ
-                                <p>BLOG</p>
-                            </a>
-                        </li>
-                        <li class="nav_footer_item">
-                            <a class="nav_footer_link" href="index.html#access">アクセス
-                                <p>ACCESS</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-              <div class="footer_inner">
-               <div class="footer_inner_left">
-                <div class="footer_logo_container">
-                    <div class="footer_logo">
-                        <img src="img/logo2.svg" alt="ロゴ">
+                <div class="feature_inner flex">
+                    <div class="about_column_55">
+                        <img src="img/img8.jpg" width="100%" alt="当院の特徴2">
+                    </div>
+                    <div class="about_column_40">
+                        <h3 id="about_colum_40">小さなお子さまからご年配の方まで通いやすい</h3>
+                        <p class="text">お子さまが楽しく通えるように、<br>
+                            キッズスペースを完備。<br>
+                            また、ご年配の方や
+                            お身体が不自由な方にも<br>
+                            安心してご来院いただけるよう、<br>
+                            バリアフリー設計 になっています。
+                        </p>
                     </div>
                 </div>
-                <div class="footer_access_info">
-                    <p>〒105-0001<br>
+                <h2 class="title">当院が大切にしていること</h2>
+                <div class="important_inner flex">
+                    <div class="column_45_text">
+                        <h3>痛みの少ないやさしい治療</h3>
+                        <p class="text">麻酔の工夫や
+                            最新の技術を取り入れ、<br>
+                            痛みを最小限に抑えた治療を心がけています。<br>
+                            歯医者が苦手な方も、安心して通っていただけるよう配慮しています。
+                        </p>
+                    </div>
+                    <div class="about_column_45">
+                        <img src="img/31836018_m.jpg" width="100%" alt="当院が大切にしていること1">
+                    </div>
+                </div>
+                <div class="important_inner flex" id="reverse">
+                    <div class="about_column_45">
+                        <img src="img/31836110_m.jpg" width="100%" alt="当院が大切にしていること2">
+                    </div>
+                    <div class="column_45_text_yobou">
+                        <h3>お口の健康を守る予防歯科</h3>
+                        <p class="text">
+                            「痛くなったら行く」のではなく、むし歯や歯周病を防ぐ予防ケアを大切にしています。<br>
+                            定期検診・クリーニングで、大切な歯を一生涯守ります。
+                        </p>
+                    </div>
+                </div>
+                <div class="important_inner flex">
+                    <div class="column_45_text">
+                        <h3>清潔で最新の設備</h3>
+                        <p class="text">
+                            患者さんが安心して治療を受けられるよう、<br>
+                            徹底した衛生管理と最新の歯科医療機器を導入。<br>
+                            快適な環境で、質の高い治療を提供します。
+                        </p>
+                    </div>
+                    <div class="about_column_45">
+                        <img src="img/3314866_m.jpg" width="100%" alt="当院が大切にしていること1">
+                    </div>
+                </div>
+            </section>
+        </main> 
+        
+        <footer>
+            <div class="container">
+                <ul class="footer_navpc flex">
+                    <li><a href="new_index.html">ホーム<!--<span>HOME</span>--></a></li>
+                    <li><a href="news.html">お知らせ<!--<span>NEWS</span>--></a></li>
+                    <li><a href="about.html">当院について<!--<span>ABOUT</span>--></a></li>
+                    <li><a href="guide.html">診療案内<!--<span>GUIDE</span>--></a></li>
+                    <li><a href="staff.html">スタッフ紹介<!--<span>STAFF</span>--></a></li>
+                    <li><a href="blog.html">スタッフブログ<!--<span>BLOG</span>--></a></li>
+                    <li><a href="new_index.html#access">アクセス<!--<span>ACCESS</span>--></a></li>
+                </ul>
+                <div class="flex">
+                <div class="column_2">
+                    <a href="new_index.html" class="logo"><img src="img/logo2.svg"></a>
+                    <p class="text" id="access_info">
+                        〒105-0001<br>
                         東京都港区虎ノ門１丁目３−１<br>
                         東京メトロ 虎ノ門駅より直結・徒歩1分<br>
                         駐車場はないので、近隣のコインパーキングをご利用ください
                     </p>
                 </div>
-               </div>
-                <div class="footer_time">
-                    <div class="footer_time_title">
-                        <p>診療時間</p>
-                    </div>
-                    <div class="footer_time_table">
-                        <table border="1">
-                            <tr>
-                                <th>時間</th>
-                                <th>月</th>
-                                <th>火</th>
-                                <th>水</th>
-                                <th>木</th>
-                                <th>金</th>
-                                <th>土</th>
-                                <th>日</th>
-                            </tr>
-                            <tr>
-                                <td>9:30~13:00</td>
-                                <td>⚪︎</td>
-                                <td>⚪︎</td>
-                                <td>-</td>
-                                <td>⚪︎</td>
-                                <td>⚪︎</td>
-                                <td>⚪︎</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>14:00~18:30</td>
-                                <td>⚪︎</td>
-                                <td>⚪︎</td>
-                                <td>-</td>
-                                <td>⚪︎</td>
-                                <td>⚪︎</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="time_text">
-                        <p>
-                         ※水曜・日曜は休診日（祝日は不定休）<br>
-                         ※土曜は午前のみ
-                        </p>
-                    </div>
+                <div class="column_2">
+                    <p id="time_title">診療時間</p>
+                    <table border="1">
+                        <tr>
+                            <th>時間</th>
+                            <th>月</th>
+                            <th>火</th>
+                            <th>水</th>
+                            <th>木</th>
+                            <th>金</th>
+                            <th>土</th>
+                            <th>日</th>
+                        </tr>
+                        <tr>
+                            <td>9:30~13:00</td>
+                            <td>⚪︎</td>
+                            <td>⚪︎</td>
+                            <td>-</td>
+                            <td>⚪︎</td>
+                            <td>⚪︎</td>
+                            <td>⚪︎</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>14:00~18:30</td>
+                            <td>⚪︎</td>
+                            <td>⚪︎</td>
+                            <td>-</td>
+                            <td>⚪︎</td>
+                            <td>⚪︎</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                    <p class="text">
+                     ※水曜・日曜は休診日（祝日は不定休）<br>
+                     ※土曜は午前のみ
+                    </p>
                 </div>
-              </div>
+                </div>
             </div>
-        </div>
-    </footer>
-  </div>
- </body>
-</html>
+            <p class="copyright">Copyright©Sawayaka Dental Clinic All Rights Reserved.</p>
+          </footer>
+      </body>
+</html>      
