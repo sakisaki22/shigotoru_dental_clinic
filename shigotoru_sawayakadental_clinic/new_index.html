@@ -17,17 +17,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Cherry+Bomb+One&family=Darumadrop+One&family=Dela+Gothic+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+Decol&family=Kiwi+Maru&family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=New+Tegomin&family=Noto+Sans+JP:wght@100..900&family=Palette+Mosaic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Yuji+Boku&family=Yuji+Mai&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
 
+  <!-- jQueryの読み込み -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- slickの読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+  <!-- Slick JSの読み込み -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
 </head>
   
 <body>
   
-  <header>
-    <div class="container flex">
-        <a href="new_index.html" class="logo">
+  <header id="header">
+    <div class="header_container flex">
+        <a href="new_index.html" class="header_logo">
             <img src="img/logo2.svg" alt="さわやか歯科クリニックのロゴ">
         </a>
-        <nav>
-            <ul class="header_navpc flex">
+        <nav class="header_navpc">
+            <ul class="flex">
                 <li><a href="new_index.html">ホーム<!--<span>HOME</span>--></a></li>
                 <li><a href="news.html">お知らせ<!--<span>NEWS</span>--></a></li>
                 <li><a href="about.html">当院について<!--<span>ABOUT</span>--></a></li>
@@ -41,21 +51,34 @@
   </header>
   
   <main>
-    <section id="hero" class="container">
-        <div class="hero_inner">
-            <h1>地域の皆様が安心して通える、家族みんなのための歯科医院</h1>
+    
+    <!-- メインビジュアル Slickを適用-->
+    <section class="mainvisual"><!--mainvisual=home-->
+        <div class="carousel"><!--carousel=home_slider_container-->
+                <div class="carousel_item">
+                  <img class="d-block w-100" src="img/img3.jpg" alt="地域の皆様が安心して通える、家族みんなのための歯科医院">
+                  <div class="carousel-caption d-none d-md-block carousel_item_text"><!--title-slideなし、content-slide=carousel_item_text-->
+                  <p>地域の皆様が安心して通える、家族みんなのための歯科医院</p>
+                  </div>
+                </div>
+                <div class="carousel_item">
+                  <img class="d-block w-100" src="img/img4.jpg" alt="清潔で快適な診療環境">
+                  <div class="carousel-caption d-none d-md-block carousel_item_text">
+                  <p>清潔で快適な診療環境</p>
+                  </div>
+                </div>
+                <div class="carousel_item">
+                  <img class="d-block w-100" src="img/28884002_m.jpg" alt="小さなお子さまからご年配の方まで通いやすい">
+                  <div class="carousel-caption d-none d-md-block carousel_item_text">
+                  <p>小さなお子さまからご年配の方まで通いやすい</p>
+                  </div>
+                </div>
         </div>
-        <!--
-        <div class="hero_inner">
-            <h1>清潔で快適な診療環境</h1>
-        </div>
-        <div class="hero_inner">
-            <h1>小さなお子さまからご年配の方まで通いやすい</h1>
-        </div>
-        -->
     </section>
 
-    <section id="news" class="container">
+     <!--ニュースとブログ-->
+    <section id="news" class="container flex">
+      <div class="news_part">
         <h2 class="title">お知らせ</h2>
         <ul>
             <li>
@@ -72,8 +95,29 @@
             </li>
         </ul>
         <a href="news.html" class="btn">もっとみる</a>
-    </section>
+      </div>
 
+      <div id="blog" class="container">
+        <h2 class="title">スタッフブログ</h2>
+        <ul>
+            <li>
+                <p class="date">2025/04/05</p>
+                <p>正しい歯磨きのコツ！毎日のケアでむし歯・歯周病を防ごう</p>
+            </li>
+            <li>
+                <p class="date">2025/04/05</p>
+                <p>定期歯科検診で健康な歯を守りましょう！</p>
+            </li>
+            <li>
+                <p class="date">2025/04/05</p>
+                <p>おすすめの歯磨き粉！</p>
+            </li>
+        </ul>
+        <a href="blog.html" class="btn">もっとみる</a>
+    </div>
+    </section>
+    
+    <!--院長挨拶-->
     <section id="greeting" class="container">
         <h2 class="title">院長よりご挨拶</h2>
         <div class="doctor_matsumoto">
@@ -103,6 +147,7 @@
             </p>
     </section>
 
+    <!--当院について-->
     <section id="about" class="container">
         <h2 class="title">当院について</h2>
         <h3>地域の皆様が安心して通える、家族みんなのための歯科医院</h3>
@@ -126,6 +171,7 @@
         <a href="about.html" class="btn">もっとみる</a>
     </section>
 
+    <!--診療案内-->
     <section id="guide" class="container">
         <h2 class="title">診療案内</h2>
         <div class="row">
@@ -149,25 +195,7 @@
         <a href="guide.html" class="btn" id="guide_btn">詳しくみる</a>
     </section>
 
-    <section id="blog" class="container">
-        <h2 class="title">スタッフブログ</h2>
-        <ul>
-            <li>
-                <p class="date">2025/04/05</p>
-                <p>正しい歯磨きのコツ！毎日のケアでむし歯・歯周病を防ごう</p>
-            </li>
-            <li>
-                <p class="date">2025/04/05</p>
-                <p>定期歯科検診で健康な歯を守りましょう！</p>
-            </li>
-            <li>
-                <p class="date">2025/04/05</p>
-                <p>おすすめの歯磨き粉！</p>
-            </li>
-        </ul>
-        <a href="blog.html" class="btn">もっとみる</a>
-    </section>
-
+    <!--アクセス-->
     <section id="access" class="container">
         <h2 class="title">アクセス</h2>
         <div class="flex" id="access_inner">
@@ -251,6 +279,12 @@
     <p class="copyright">Copyright©Sawayaka Dental Clinic All Rights Reserved.</p>
   </footer>
   
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+   <!-- slickの読み込み -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

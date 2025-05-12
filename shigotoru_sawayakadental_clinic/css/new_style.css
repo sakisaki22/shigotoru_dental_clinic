@@ -1,5 +1,19 @@
-html{
-    font-family: "Noto Sans JP", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  /*文字を滑らかで読みやすくするテクニック*/
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  /*セットで使おう*/
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+body {
+  font-family: "Noto Sans JP", serif;
+  font-size: 15px;
+  font-weight: 400;
+  background: #ffffff;
+  color: #333;
 }
 
 .container{
@@ -7,6 +21,114 @@ html{
     max-width: 1220px;
     margin: 0 auto;
     position: relative;
+}
+
+section,
+div{
+    display: block;
+  position: relative;
+  /*全てのブラウザで正しく適用する*/
+  -webkit-box-sizing: border-box;/*Safariなど古いWebKit用*/
+  -moz-box-sizing: border-box;/*古いFirefox用*/
+  box-sizing: border-box;/*標準仕様（モダンブラウザ用）*/
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.85;
+  font-weight: 400;
+  color: #333;
+  /*セットきた*/
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+p a {
+  display: inline;/*widthやheightが効かず、横に並ぶ*/
+  position: relative;
+  color: inherit;/*親要素の文字色をそのまま引き継ぐ*/
+  /*トランジションをふわっとさせる*/
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  /* セットで使おう */
+}
+
+a,
+a:hover{
+  text-decoration: none;
+  /* セットきた */
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+p a:hover {
+  color: #ffffff;
+  background: #ffa07f;
+}
+
+p a:hover::after {
+  opacity: 0.2;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  /* セットきた */
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  color: #384158;
+  margin-bottom: 0;
+}
+
+/* テキストを選択した時の見た目 */
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+}
+
+section {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
 }
 
 /* 横並びのcss */
@@ -18,17 +140,58 @@ html{
 }
 
 /* ヘッダー */
-header{
-    padding: 27px 0;
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  /*セットきた*/
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
-.logo img{
-    width: 200px;
+.header.scrolled {
+  top: -40px;
+}
+
+.header_container {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  opacity: 0.8;
+  height: 70px;
+  padding: 0 30px;
+  /*セットきた*/
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.header.scrolled .header_content {
+  height: 80px;
+}
+
+/*
+.header{
+    padding: 27px 0;
+}
+*/
+
+.header_logo img{
+    width: 150px;
     height: auto;
 }
 
 .header_navpc li{
-    margin-left: 38px;
+    margin-left: 30px;
+    font-weight: 600;
 }
 
 /* マウスカーソルを当てると色が変わる */
@@ -42,12 +205,20 @@ header{
     transition: .3s;
 }
 
+
+/*PCの時、ハンバーガーメニューとスマホナビは非表示*/
+@media only screen and (min-width:1025px) {
+    #hamburger,
+    .header_navsp{
+        display: none;
+    }
+}
 /* スマホメディアクエリ */
 @media only screen and (max-width: 767px) {
     header .container{
         justify-content: center;
     }
-    header nav{
+    .header_navpc{
         display: none;
     }
 }
@@ -57,28 +228,50 @@ header{
     header .container{
         justify-content: center;
     }
-    header nav{
+    .header_navpc{
         display: none;
     }
 }
 
+/*
+こ
+こ
+ま
+で
+実
+装
+ハンバーガーメニューとスマホナビはまだ書いてない
+*/
 
 /* -メインビジュアル- */
-#hero{
-    background-image: url(../img/img3.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 540px;
-    border-radius: 30px;
+.mainvisual{
+    width: 100%;
+    /* height: 540px; */
+}
+
+.carousel{
+    width: 100%;
+    height: 600px;
+}
+
+.carousel_item{
+    position: relative;
+    height: 600px;
+}
+
+.carousel_item img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
     display: flex;
     align-items: center;
-    margin-bottom: 80px;
-    /* はみ出たところはカット */
+    /*はみ出たところはカット*/
     overflow: hidden;
+    justify-content: center;
 }
 
 /* 擬似要素を追加（上から白いフィルターをかける） */
-#hero::before {
+.carousel_item::before{
     content: '';
     width: 100%;
     height: 100%;
@@ -88,21 +281,24 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-    /* 不透明度20% */
-    opacity: 0.2;
+    opacity: 0;
     z-index: 1;
 }
 
-.hero_inner{
+.carousel_item_text{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* さらに中央に合わせる */
     z-index: 2;
     color: #289CF7;
-    width: 100%;
+    font-size: 22px;
     text-align: center;
-}
-
-.hero_inner h1{
-    font-size: 32px;
-    font-weight: 700;
+    background-color: #fff;
+    padding: 0 20px;
+    line-height: 1.6;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(255,255,255,0.5);
 }
 
 /* スマホメディアクエリ */
@@ -127,19 +323,26 @@ header{
   } 
 }
 
+
+
+
+
 /* -お知らせ- */
 #news{
     padding-top: 60px;
-    margin-bottom: 60px;
 }
 
-#news ul{
+.news_part{
+    width: 48%;
+}
+
+.news_part ul{
     max-width: 700px;
     /* 要素を真ん中に寄せる */
     margin: 0 auto;
 }
 
-#news li{
+.news_part li{
     border: solid 1px rgb(51,51,51);
     margin-bottom: 20px;
     padding: 16px 24px;
@@ -167,7 +370,7 @@ header{
     width: 180px;
 }
 
-#news a:hover{
+.news_part a:hover{
     background-color: #BFE2FB;
 }
 
@@ -193,11 +396,53 @@ header{
     }
 }
 
+/* -スタッフブログ- */
+#blog{
+    padding-top: 60px;
+    margin-bottom: 60px;
+    width: 48%;
+}
+
+#blog ul{
+    max-width: 700px;
+    /* 要素を真ん中に寄せる */
+    margin: 0 auto;
+}
+
+#blog li{
+    border: solid 1px rgb(51,51,51);
+    margin-bottom: 20px;
+    padding: 16px 24px;
+}
+
+#blog a:hover{
+    background-color: #BFE2FB;
+}
+
+/* スマホメディアクエリ */
+@media only screen and (max-width: 767px) {
+    #blog{
+        margin-bottom: 30px;
+    }
+    #blog li{
+        font-size: 15px;
+    }
+}
+/* タブレットメディアクエリ */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #blog{
+        margin-bottom: 30px;
+    }
+    #blog li{
+        font-size: 17px;
+    }
+}
+
+
 
 /* -院長よりご挨拶- */
 #greeting{
     padding-top: 60px;
-    margin-bottom: 60px;
     margin: 0 auto;
 }
 
@@ -254,7 +499,6 @@ header{
 
 /* -当院について- */
 #about{
-    margin-bottom: 120px;
     padding-top: 60px;
 }
 
@@ -404,46 +648,6 @@ header{
     }
 }
 
-/* -スタッフブログ- */
-#blog{
-    padding-top: 60px;
-    margin-bottom: 60px;
-}
-
-#blog ul{
-    max-width: 700px;
-    /* 要素を真ん中に寄せる */
-    margin: 0 auto;
-}
-
-#blog li{
-    border: solid 1px rgb(51,51,51);
-    margin-bottom: 20px;
-    padding: 16px 24px;
-}
-
-#blog a:hover{
-    background-color: #BFE2FB;
-}
-
-/* スマホメディアクエリ */
-@media only screen and (max-width: 767px) {
-    #blog{
-        margin-bottom: 30px;
-    }
-    #blog li{
-        font-size: 15px;
-    }
-}
-/* タブレットメディアクエリ */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    #blog{
-        margin-bottom: 30px;
-    }
-    #blog li{
-        font-size: 17px;
-    }
-}
 
 
 /* アクセス */
@@ -497,7 +701,7 @@ footer{
     padding: 27px 0;
 }
 
-.logo img{
+.footer_logo img{
     width: 200px;
     height: auto;
 }
